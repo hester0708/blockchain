@@ -1,38 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="basic.css">
     <link rel="stylesheet" href="navbar.css">
-    <title>主畫面</title>
+    <title>区块链网上投票系统</title>
 </head>
 <style>
     #table1 {
         border: 1px solid black;
         border-radius: 10px;
         width: 60%;
-        margin: 0 auto;
+        margin: auto;
         padding: 20px;
         background-color: white;
     }
 
     #table1_title1, #table1_title2, #table1_title3 {
         display: block;
-        background-color: #b37400;
+        background-color: #e69500;
         border: #664200;
-        border-radius: 30px;
-        width: 40%;
+        border-radius: 50px;
+        width: 23%;
         margin: 0 auto;
         color: #EEE;
         font-weight: bold;
-        padding: 20px;
+        padding: 5px;
         text-align: center;
-        font-size: 36px;
+        font-size: 20px;
     }
 
     #table1_caption1, #table1_caption2, #table1_caption3 {
         color: black;
-        font-size: 24px;
+        font-size: 18px;
         text-align: justify;
     }
 
@@ -97,59 +97,62 @@
     }
 </style>
 <body>
-    <div id="banner">
-        <div id="navbar">
-            <ul>
-                <li><a href="index.html" class="homebutton">主畫面</a></li>
-                <li><a href="login.html">登入</a></li>
-                <li><a href="regis.html">註冊</a></li>
-                <li style="float:right"><a href="aboutus.html">關於我們</a></li>
-            </ul>
-        </div>
-    </div>
     <div id="headingblock">
         <div id="headingele">
-            <div style="height: 100px"></div>
-            <div id="headhead">區塊鏈網上投票</div>
-            <br>
-            <div id="headdes">一個更安全的投票方法</div>
-            <br>
+            <div id="headhead">
+                <text>区块链网上投票系统</text>
+            </div>
         </div>
         <br>
     </div>
-    <div id="contentblockodd">
-        <div style="height: 100px"></div>
-        <div id="table1">
-
-            <div id="table1_title1">选票发放及验证</div>
-            
-            <div id="table1_caption1"><br>为了确保选举的有效性，每一位选民都将进行身份认证，并在认证后给予一个对应的区块链身份证ID。
-                除此以外，区块链身份验证也减少欺骗系统或在错误的司法管辖区投票的可能。
-                区块链共享账本不可篡改特性使区块链本身变得相对安全，避免了人为的数据变更。
-            </div>
-
-            <div id="table1_title2">匿名投票</div>
-            
-            <div id="table1_caption2"><br>选民身份ID可以对所有人可见，但不公开身份ID背后的个人信息。
-                此举可以在保证选民的个人隐私同时，也大大提高投票系统的公正与透明度。
-            </div>
-
-            <div id="table1_title3">公开透明</div>
-            
-            <div id="table1_caption3"><br>所有选民均可透过区块链来查询投票人数、各候选人或议案的得票数量等实时信息。
-                由于投票信息是实时性的，选民可以同时扮演检察者的角色，可查询验证投票结果是否正确，确保投票系统的公正。
-            </div>
-            <br><br>
-            <div id="horscrollbar">
-                <input type="radio" id="firstHS" name="horscroll" value="1" checked="checked" onClick="horbarswitch(1)">
-                <input type="radio" id="secondHS" name="horscroll" value="2" onClick="horbarswitch(2)">
-                <input type="radio" id="thirdHS" name="horscroll" value="3" onClick="horbarswitch(3)">
+    <div id="banner">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="homebutton">首页</a></li>
+                <li>  </li>
+                <li><a href="login.html">登录</a></li>
+                <li>  </li>
+                <li><a href="regis.html">注册</a></li>
+                <!--<li style="float:right"><a href="aboutus.html">关于我们</a></li>-->
+                </ul>
             </div>
         </div>
-        <div style="height: 100px"></div>
-    </div>
-    <div id="contentblockeven">
-        <div style="height:100px"></div>
+        <div id="contentblockodd">
+            <div style="height: 150px"></div>
+            <div id="table1">
+
+                <div id="table1_title1">选票发放及验证</div>
+
+                <div id="table1_caption1">
+                    <br>为了确保选举的有效性，每一位选民都将进行身份认证，并在认证后给予一个对应的区块链身份证ID。
+                    除此以外，区块链身份验证也减少欺骗系统或在错误的司法管辖区投票的可能。
+                    区块链共享账本不可篡改特性使区块链本身变得相对安全，避免了人为的数据变更。
+                </div>
+
+                <div id="table1_title2">匿名投票</div>
+
+                <div id="table1_caption2">
+                    <br>选民身份ID可以对所有人可见，但不公开身份ID背后的个人信息。
+                    此举可以在保证选民的个人隐私同时，也大大提高投票系统的公正与透明度。
+                </div>
+
+                <div id="table1_title3">公开透明</div>
+
+                <div id="table1_caption3">
+                    <br>所有选民均可透过区块链来查询投票人数、各候选人或议案的得票数量等实时信息。
+                    由于投票信息是实时性的，选民可以同时扮演检察者的角色，可查询验证投票结果是否正确，确保投票系统的公正。
+                </div>
+                <br><br>
+                <!--<div id="horscrollbar">
+                    <input type="radio" id="firstHS" name="horscroll" value="1" checked="checked" onClick="horbarswitch(1)">
+                    <input type="radio" id="secondHS" name="horscroll" value="2" onClick="horbarswitch(2)">
+                    <input type="radio" id="thirdHS" name="horscroll" value="3" onClick="horbarswitch(3)">
+                </div>-->
+            </div>
+            <div style="height: 100px"></div>
+        </div>
+        <div id="contentblockeven">
+            <div style="height:100px"></div>
             <table id="table2">
                 <tr>
                     <th>高安全性</th>
@@ -160,61 +163,61 @@
                     <th>不可篡改性</th>
                 </tr>
             </table>
-        <div style="height:100px"></div>
-    </div>
-    <div id="contentblockodd">
-        <div style="height:100px"></div>
-        <div id="table1">
-            <div style="height:100px"></div>
-            <div id="headhead" style="color:black;text-align:center">只需要一個帳號<br>便可隨時隨地的投票<br>方便快捷</div>
-            <br><br><br>
-            <a href="regis.html" id="regisbutton">註冊</a>
-            <br>
-            <div style="font-size:20px;text-align:center">已經有帳號? <a href="login.html" id="loginbutton">按此登入</a></div>
             <div style="height:100px"></div>
         </div>
-        <div style="height:100px"></div>
-    </div>
-    <div id="contentblockeven">
-        <div style="height:100px"></div>
-        <div style="height:100px"></div>
-    </div>
-</body>
-<script>
-    function initialize() {
-        //table1
-        document.getElementById("table1_title2").style.display = "none";
-        document.getElementById("table1_title3").style.display = "none";
-        document.getElementById("table1_caption2").style.display = "none";
-        document.getElementById("table1_caption3").style.display = "none";
-    }
-    initialize();
+        <div id="contentblockodd">
+            <div style="height:100px"></div>
+            <div id="table1">
+                <div style="height:100px"></div>
+                <div id="headhead" style="color:black;text-align:center">只需要一個帳號<br>便可隨時隨地的投票<br>方便快捷</div>
+                <br><br><br>
+                <a href="regis.html" id="regisbutton">註冊</a>
+                <br>
+                <div style="font-size:20px;text-align:center">已經有帳號? <a href="login.html" id="loginbutton">按此登入</a></div>
+                <div style="height:100px"></div>
+            </div>
+            <div style="height:100px"></div>
+        </div>
+        <div id="contentblockeven">
+            <div style="height:100px"></div>
+            <div style="height:100px"></div>
+        </div>
+    </body>
+    <script>
+        function initialize() {
+            //table1
+            document.getElementById("table1_title2").style.display = "none";
+            document.getElementById("table1_title3").style.display = "none";
+            document.getElementById("table1_caption2").style.display = "none";
+            document.getElementById("table1_caption3").style.display = "none";
+        }
+        initialize();
 
-    function horbarswitch(index) {
-        var A = document.getElementById("table1_title1");
-        var B = document.getElementById("table1_title2");
-        var C = document.getElementById("table1_title3");
-        var a = document.getElementById("table1_caption1");
-        var b = document.getElementById("table1_caption2");
-        var c = document.getElementById("table1_caption3");
-        A.style.display = "none";
-        B.style.display = "none";
-        C.style.display = "none";
-        a.style.display = "none";
-        b.style.display = "none";
-        c.style.display = "none";
-        if (index==1) {
-            A.style.display = "block";
-            a.style.display = "block";
+        function horbarswitch(index) {
+            var A = document.getElementById("table1_title1");
+            var B = document.getElementById("table1_title2");
+            var C = document.getElementById("table1_title3");
+            var a = document.getElementById("table1_caption1");
+            var b = document.getElementById("table1_caption2");
+            var c = document.getElementById("table1_caption3");
+            A.style.display = "none";
+            B.style.display = "none";
+            C.style.display = "none";
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "none";
+            if (index==1) {
+                A.style.display = "block";
+                a.style.display = "block";
+            }
+            if (index==2) {
+                B.style.display = "block";
+                b.style.display = "block";
+            }
+            if (index==3) {
+                C.style.display = "block";
+                c.style.display = "block";
+            }
         }
-        if (index==2) {
-            B.style.display = "block";
-            b.style.display = "block";
-        }
-        if (index==3) {
-            C.style.display = "block";
-            c.style.display = "block";
-        }
-    }
-</script>
-</html>
+    </script>
+    </html>
