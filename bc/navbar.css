@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+#navbar {
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: darkred;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: darkred;
+    top: 0;
+    position: sticky;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #b37400;
+}
+
+.homebutton {
+    background-color: #e69500;
+    width: 30px;
+    height: 20px;
+}
