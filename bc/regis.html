@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="basic.css">
+<link rel="stylesheet" href="navbar.css">
+<style>
+body {
+	background-color: #333;
+}
+
+#orangebutton {
+	display: block;
+    text-align: center;
+    float: right;
+    background-color: orange;
+    color: white;
+    font-size: 150%;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    width: 30%;
+}
+
+#orangebutton:hover {
+    background-color: #e69500;
+    cursor: pointer;
+}
+
+#layout1 {
+	padding: 10%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#formSur, #formName, #formUs, #formEmail, #formPhone, #formId, #formPw, #formPwCon {
+    margin: 0;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+#plink {
+    color: orange;
+}
+
+#plink:hover {
+    color: #e69500;
+}
+</style>
+<title>Register</title>
+</head>
+<body>
+
+<div id="banner">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="homebutton">主畫面</a></li>
+                <li><a href="login.html">登入</a></li>
+                <li><a href="regis.html">註冊</a></li>
+                <li style="float:right"><a href="aboutus.html">關於我們</a></li>
+            </ul>
+        </div>
+</div>
+<div id="topbar" style="height:0px"></div>
+<div id="WF">
+<div class="whiteframe">
+	<div id="frametitle">建立帳號</div>
+	<div id="framesubtitle">只需要一個帳號，便能夠隨時隨地的投票</div>
+	<table id="layout1">
+		<tr>
+        	<td><input type="text" id="formSur" placeholder="姓氏"></td>
+            <td colspan="2"><input type="text" id="formName" placeholder="名字"></td>
+        </tr>
+        <tr>
+        	<td colspan="3" id="emptyName">請填寫姓氏及名字</td>
+        </tr>
+        <tr>
+        	<td colspan="2"><input type="text" id="formUs" placeholder="用戶名稱"></td>
+            <td><div id="flagUs"></div></td>
+        </tr>
+        <tr>
+        	<td colspan="3" id="emptyUs">請填寫有效的用戶名稱</td>
+        </tr>
+        <tr>
+        	<td colspan="2"><input type="email" id="formEmail" placeholder="電郵"></td>
+            <td><div id="flagEmail"></div></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><div id="emptyEmail">請填寫有效的電郵</div></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><input type="text" id="formPhone" placeholder="聯絡電話"></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><div id="emptyPhone">請填寫有效的聯絡電話</div></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><input type="text" id="formId" placeholder="身分證號碼"></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><div id="emptyId">請填寫有效的身分證</td>
+        </tr>
+        <tr>
+        	<td colspan="2"><input type="password" id="formPw" placeholder="密碼"></td>
+            <td><div id="pwStrength"></div></td>
+        </tr>
+        <tr>
+        	<td colspan="3" id="numSymbolCheck">密碼需為8-50字元之間，當中包含數字及符號</td>
+        </tr>
+        <tr>
+        	<td colspan="3"><div id="emptyPw">請填寫有效的密碼</div></td>
+        </tr>
+        <tr>
+        	<td colspan="2"><input type="password" id="formPwCon" placeholder="密碼確認"></td>
+            <td></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><div id="emptyPwCon">確認密碼與原先密碼不相符</div></td>
+        </tr>
+        <tr>
+        	<td colspan="3"><input type="checkbox" onClick="showPw()">顯示密碼</td>
+        </tr>
+        <br><br><br>
+        <tr>
+        	<td colspan="2"><a href="login.html" id="plink">改為登入帳號</a></td>
+            <td><button id="orangebutton" onClick="regis()">註冊</a></td>
+        <tr>
+	</table>
+</div>
+<div id="bottombar" style="height:0px"></div>
+</div>
+<div id="pending">
+    <div id="verticalborder" style="height:0px"></div>
+    <div id="WF">
+        <div class="whiteframe">
+            <div style="height:200px"></div>
+            <div id="headhead" style="color:black">
+                等待通过CA进行身份认证，大约需时1至2个工作天。準備跳至主頁。
+            </div>
+            <div style="height:200px"></div>
+        </div>
+    </div>
+    <div id="pendBottom" style="height:0px"></div>
+</div>
+<script>
+	function initializeEmpty() {
+    	document.getElementById("emptyName").style.display = "none";
+        document.getElementById("emptyUs").style.display = "none";
+        document.getElementById("emptyEmail").style.display = "none";
+        document.getElementById("emptyPhone").style.display = "none";
+        document.getElementById("emptyId").style.display = "none";
+        document.getElementById("numSymbolCheck").style.display = "block";
+        document.getElementById("emptyPw").style.display = "none";
+        document.getElementById("emptyPwCon").style.display = "none";
+        document.getElementById("pending").style.display = "none";
+
+    }
+    initializeEmpty();
+    
+    function topbarsetup() {
+    	var source = document.getElementById("WF");
+        var target1 = document.getElementById("topbar");
+	    var target2 = document.getElementById("bottombar");
+        var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/2;
+        target1.style.height = calHeight + "px";
+	target2.style.height = calHeight + "px";
+    }
+    topbarsetup();
+    
+    function checkPw(str) {
+    	var status = true;
+        
+    	return status;
+    }
+    
+    function regis() {
+    	var status = true;
+        var sur = document.getElementById("formSur").value;
+        var name = document.getElementById("formName").value;
+        var us = document.getElementById("formUs").value;
+        var email = document.getElementById("formEmail").value;
+        var phone = document.getElementById("formPhone").value;
+        var id = document.getElementById("formId").value;
+        var pw = document.getElementById("formPw").value;
+        var pwCon = document.getElementById("formPwCon").value;
+        initializeEmpty();
+        if ((!sur)||(!name)) {
+        	document.getElementById("emptyName").style.display = "block";
+        	status = false;
+        }
+        if (!us) {
+        	document.getElementById("emptyUs").style.display = "block";
+        	status = false;
+        }
+        if (!email) {
+        	document.getElementById("emptyEmail").style.display = "block";
+        	status = false;
+        }
+        if (!phone) {
+        	document.getElementById("emptyPhone").style.display = "block";
+        	status = false;
+        }
+        if (!id) {
+        	document.getElementById("emptyId").style.display = "block";
+        	status = false;
+        }
+        if (!pw) {
+        	document.getElementById("emptyPw").style.display = "block";
+        	status = false;
+        }
+        else {
+            if (checkPw(pw)==true) {
+            	document.getElementById("numSymbolCheck").style.display = "none";
+            }
+        }
+        if (pw!=pwCon) {
+        	document.getElementById("emptyPwCon").style.display = "block";
+        	status = false;
+        }
+        if (status) {
+            showPending();
+        }
+        return status;
+    }
+
+    function showPending() {
+        document.getElementById("banner").style.display = "none";
+        document.getElementById("WF").style.display = "none";
+        document.getElementById("pending").style.display = "block";
+
+        var source = document.getElementById("WF");
+        var target = document.getElementById("verticalborder");
+        var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/10;
+        target.style.height = calHeight + "px";
+        document.getElementById("pendBottom").style.height = calHeight + "px";
+
+        var t = setTimeout(closePending, 3000);
+    }
+
+    function closePending() {
+        window.location = "index.html"
+    }
+    
+    function showPw() {
+    	var x = document.getElementById("formPw");
+        var y = document.getElementById("formPwCon");
+        if (x.type==="password") {
+        	x.type = "text";
+            y.type = "text";
+        }
+        else {
+        	x.type = "password";
+            y.type = "password";
+        }
+    }
+</script>
+</body>
+</html>
