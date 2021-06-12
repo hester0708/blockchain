@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="navbar.css">
+    <title>關於我們</title>
+</head>
+<style>
+    #memberbox {
+    	background-color: white;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    #memberInitial {
+    	margin: auto;
+        padding: 10px;
+    }
+
+    #memberInitial button {
+    	display: block;
+        background-color: #333;
+        color: white;
+        font-size: 64px;
+        border: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    #memberInitial button:hover {
+    	background-color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #grp {
+    	display: block;
+        border: 0;
+        font-size: 72px;
+        background-color: orange;
+        color: white;
+        text-align: center;
+        width: 20%;
+        border-radius: 10px;
+    }
+
+    #grp:hover {
+    	background-color: #e69500;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #prof {
+    	display: block;
+        border: 0;
+    	background-color: orange;
+        margin: auto;
+        width: 60%;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 64px;
+        border-radius: 10px;
+    }
+
+    #des {
+    	color: #222;
+        text-align: justify;
+        font-size: 28px;
+    }
+</style>
+<body>
+    <div id="banner">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="homebutton">主畫面</a></li>
+                <li><a href="login.html">登入</a></li>
+                <li><a href="regis.html">註冊</a></li>
+                <li style="float:right"><a href="aboutus.html">關於我們</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="headingblock">
+        <div id="headingele">
+            <div style="height: 100px"></div>
+            <div id="headhead">關於我們</div>
+            <br>
+            <div id="headdes">金狼方可喵</div>
+            <br>
+        </div>
+        <br>
+    </div>
+    <div id="contentblockodd">
+    	<div style="height:100px"></div>
+        <div id="memberbox">
+        	<button id="grp" onClick="switchdisplay(0)">組</button>
+        	<table id="memberInitial">
+            	<tr>
+                	<td><button id="gold" onClick="switchdisplay(1)">金</button></td>
+                	<td><button id="wolf" onClick="switchdisplay(2)">狼</button></td>
+                	<td><button id="cube" onClick="switchdisplay(3)">方</button></td>
+                	<td><button id="coke" onClick="switchdisplay(4)">可</button></td>
+                	<td><button id="meow" onClick="switchdisplay(5)">喵</button></td>
+                </tr>
+            </table>
+            <div style="height:75px"></div>
+        	<div id="prof">
+                <div id="grpT">組名由來</div>
+        		<div id="goldT">李新一</div>
+        	    <div id="wolfT">何娅卉</div>
+        	    <div id="cubeT">张馨方</div>
+        	    <div id="cokeT">周百乐</div>
+        	    <div id="meowT">陈涛悦</div>
+        	</div>
+            <div style="height:75px"></div>
+            <div id="des">
+                <div id="grpD">我們每一位組員先寫出一個代表自己的字，然後調轉順序，找一個通順的組名出來。按以上的鍵來探索我們每一位組員。</div>
+            	<div id="goldD">我是香港中文大學學生，主修計算機科學，從中學開始我漸漸的對編寫程式和編寫網頁產生興趣，所以一直在探索和學習更多的。
+                於是隨著其他隊友的鼓勵下，我決定參加這個比賽，希望能夠發掘自己的所能，運用自己於學校所學的知識。
+                我本身對區塊鏈的認識不大，不過知道這是近代數據保護的一個方法，於是想透過參加比賽發掘更多，了解這科技如何對社會發展有益。</div>
+        	    <div id="wolfD">香港中文大学学生，主修计量金融及风险管理，辅修计算机科学。
+                我在这一学期参加了上海交通大学的交换项目，亦因此得知2021华为区块链高校大赛，组队参加。
+                在大学中修读的编程课中，我发现了自己在编程领域的兴趣，选择辅修计算机科学，目前正在上海交通大学修读数据结构、软件工程等课程。
+                虽然我所学的知识有限，但是我在比赛的过程中不断学习，希望可以将项目做到最好。</div>
+        	    <div id="cubeD">香港中文大学数学系学生，辅修计算机科学。
+                我现在在做纵向数据与时间序列数据方面的研究助理与数据分析的实习，对数据科学有浓厚的兴趣。
+                并对区块链技术如何与数据科学相结合，在当代社会大放异彩充满期待。
+                在迄今为止的大学期间修读的几门编程课程，也激发了对计算机科学的兴趣，并对用此方面知识研究、运用区块链技术充满信心。
+                希望能运用我所学的知识，不断学习、探索，真正让区块链助益社会发展。</div>
+        	    <div id="cokeD">你好，我是周百乐，香港城市大學金融系学生。
+                我从小對於金融和科技方面有相當大的熱情和興趣，在課堂所學無法滿足我對此領域的好奇，於是我在大学中参加了不同的商业计划比赛。
+                尽管我和我的团队并没有在比赛中脫穎而出，但我从失败中得到了不少宝贵的经验。
+                我相信我对金融和科技界的熱情和不放弃的精神，能让能讓我在工作上发展所长。</div>
+        	    <div id="meowD">我现就读于香港中文大学，主修统计学，辅修计算机科学。
+                我对各种新兴技术及它们在社会生活中的应用有着浓厚的兴趣和深入研究的欲望，区块链是其中之一。
+                现阶段希望能通过不断地探索和实践，加深对应用科学所包含之技术与人文的面向之理解，在提升自身如编程、数据处理的硬性能力的同时，了解如何让技术适应个体与社会的需求。</div>
+            </div>
+    		<div style="height:100px"></div>
+        </div>
+        <div style="height:100px"></div>
+    </div>
+    <div id="contentblockeven">
+    	<div style="height:100px"></div>
+        <div style="height:100px"></div>
+    </div>
+</body>
+<script>
+    function switchdisplay(a) {
+        document.getElementById("grpT").style.display = "none";
+        document.getElementById("grpD").style.display = "none";
+    	document.getElementById("goldT").style.display = "none";
+        document.getElementById("goldD").style.display = "none";
+        document.getElementById("wolfT").style.display = "none";
+        document.getElementById("wolfD").style.display = "none";
+        document.getElementById("cubeT").style.display = "none";
+        document.getElementById("cubeD").style.display = "none";
+        document.getElementById("cokeT").style.display = "none";
+        document.getElementById("cokeD").style.display = "none";
+        document.getElementById("meowT").style.display = "none";
+        document.getElementById("meowD").style.display = "none";
+        
+        document.getElementById("gold").style.backgroundColor = "rgb(33, 33, 33)";
+        document.getElementById("wolf").style.backgroundColor = "rgb(33, 33, 33)";
+        document.getElementById("cube").style.backgroundColor = "rgb(33, 33, 33)";
+        document.getElementById("coke").style.backgroundColor = "rgb(33, 33, 33)";
+        document.getElementById("meow").style.backgroundColor = "rgb(33, 33, 33)";
+        switch (a) {
+            case 0:
+                document.getElementById("grpT").style.display = "block";
+                document.getElementById("grpD").style.display = "block";
+                break;
+        	case 1:
+            	document.getElementById("goldT").style.display = "block";
+                document.getElementById("goldD").style.display = "block";
+                document.getElementById("gold").style.backgroundColor = "rgb(255, 165, 0)";
+                break;
+            case 2:
+            	document.getElementById("wolfT").style.display = "block";
+                document.getElementById("wolfD").style.display = "block";
+                document.getElementById("wolf").style.backgroundColor = "rgb(255, 165, 0)";
+                break;
+            case 3:
+            	document.getElementById("cubeT").style.display = "block";
+                document.getElementById("cubeD").style.display = "block";
+                document.getElementById("cube").style.backgroundColor = "rgb(255, 165, 0)";
+                break;
+            case 4:
+            	document.getElementById("cokeT").style.display = "block";
+                document.getElementById("cokeD").style.display = "block";
+                document.getElementById("coke").style.backgroundColor = "rgb(255, 165, 0)";
+                break;
+            case 5:
+            	document.getElementById("meowT").style.display = "block";
+                document.getElementById("meowD").style.display = "block";
+                document.getElementById("meow").style.backgroundColor = "rgb(255, 165, 0)";
+                break;
+            default:
+            	break;
+        }
+    }
+    switchdisplay(0);
+</script>
+</html>
