@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>登入</title>
+<link rel="stylesheet" href="basic.css">
+<link rel="stylesheet" href="navbar.css">
+</head>
+<style>
+    body {
+        background-color: #333;
+    }
+
+    #plink {
+        color: orange;
+    }
+
+    #plink:hover {
+        color: #e69500;
+    }
+
+    #usId_empty, #pw_empty {
+        color: #805300;
+    }
+</style>
+<body>
+<div id="banner">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="homebutton">主畫面</a></li>
+                <li><a href="login.html">登入</a></li>
+                <li><a href="regis.html">註冊</a></li>
+                <li style="float:right"><a href="aboutus.html">關於我們</a></li>
+            </ul>
+        </div>
+</div>
+
+<div id="verticalborder"></div>
+
+<div id="WF">
+<div class="whiteframe">
+    <div id="frametitle"><p>登入</p></div>
+    <div id="framesubtitle"><p>使用你的帳號</p></div>
+    <br>
+    <input type="email" id="usId" placeholder="輸入你的用戶名稱或電郵">
+    <br><br>
+    <div id="usId_empty">你的用戶名稱或電郵不得填空格</div>
+    <br><br>
+    <input type="password" id="pw" placeholder="輸入密碼">
+    <br><br>
+    <div id="pw_empty">你的密碼不得填空格</div>
+    <br><br>
+    <a href="" id="plink">忘記密碼</a>
+    <br><br>
+    <a href="regis.html" id="plink">建立帳號</a>
+    <br><br>
+    <button id="orangebutton" onClick="loginbutton()">登入</button>
+    <br><br><br><br>
+</div>
+</div>
+
+<div id="pending">
+    <div id="verticalborder" style="height:0px"></div>
+    <div id="WF">
+        <div class="whiteframe">
+            <div style="height:200px"></div>
+            <div id="headhead" style="color:black">
+                正在通过CA进行身份认证，请耐心等待。
+            </div>
+            <div style="height:200px"></div>
+        </div>
+    </div>
+    <div id="pendBottom" style="height:0px"></div>
+</div>
+
+<script>
+function alignVB() {
+    var source = document.getElementById("WF");
+    var target = document.getElementById("verticalborder");
+    var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/2;
+    target.style.height = calHeight + "px";
+}
+alignVB();
+
+function hidePending() {
+    document.getElementById("pending").style.display = "none";
+}
+hidePending();
+
+function hideEmpty() {
+    var idE = document.getElementById("usId_empty");
+    var pwE = document.getElementById("pw_empty");
+    idE.style.display = "none";
+    pwE.style.display = "none";
+}
+hideEmpty();
+
+function loginbutton() {
+    var id = document.getElementById("usId").value;
+    var pw = document.getElementById("pw").value;
+    var idE = document.getElementById("usId_empty");
+    var pwE = document.getElementById("pw_empty");
+    var status = true;
+    if (!id) {
+        status = false;
+        idE.style.display = "block";
+    }
+    else idE.style.display = "none";
+    if (!pw) {
+        status = false;
+        pwE.style.display = "block";
+    }
+    else pwE.style.display = "none";
+    if (status==false) {
+        alert("無法登入");
+    }
+    else showPending();
+}
+
+function showPending() {
+    document.getElementById("banner").style.display = "none";
+    document.getElementById("WF").style.display = "none";
+    document.getElementById("pending").style.display = "block";
+
+    var source = document.getElementById("WF");
+    var target = document.getElementById("verticalborder");
+    var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/6;
+    target.style.height = calHeight + "px";
+    document.getElementById("pendBottom").style.height = calHeight + "px";
+
+    var timeout = setTimeout(closePending, 3000);
+}
+
+function closePending() {
+   window.location = "account/index.html";
+}
+</script>
+</body>
+</html>

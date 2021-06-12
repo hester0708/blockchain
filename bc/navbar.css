@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+#navbar {
+    width: 100%;
+    display: block;
+    background-color: #444;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #444;
+    top: 0;
+    position: sticky;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: black;
+}
+
+.homebutton {
+    background-color: #e69500;
+}
