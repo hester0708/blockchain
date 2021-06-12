@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        #orangebutton {
+            display: block;
+            text-align: center;
+            float: right;
+            background-color: orange;
+            color: white;
+            font-size: 150%;
+            border-radius: 10px;
+            border: 0px;
+            padding: 10px;
+            width: 30%;
+        }
+
+            #orangebutton:hover {
+                background-color: #e69500;
+                cursor: pointer;
+            }
+
+        #layout1 {
+            padding: 10%;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #formSur, #formName, #formUs, #formEmail, #formPhone, #formId, #formPw, #formPwCon {
+            margin: 0;
+            padding: 10px 10px;
+            width: 100%;
+        }
+
+        #plink {
+            color: orange;
+        }
+
+            #plink:hover {
+                color: #e69500;
+            }
+        #usId_empty, #pw_empty {
+            color: red;
+            font-size: 12px;
+            padding: 1px;
+        }
+
+        #table1_title1, #table1_title2, #table1_title3 {
+            display: block;
+            background-color: #e69500;
+            border: #664200;
+            border-radius: 50px;
+            width: 23%;
+            margin: 0 auto;
+            color: #EEE;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <title>Register</title>
+</head>
+<body>
+    <div id="headingblock">
+        <div id="headingele">
+            <div id="headhead">
+                <text>区块链网上投票系统</text>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="banner">
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html" class="homebutton">首页</a></li>
+                <li>  </li>
+                <li><a href="login.html">登录</a></li>
+                <li>  </li>
+                <li><a href="regis.html">注册</a></li>
+                <!--<li style="float:right"><a href="aboutus.html">关于我们</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div id="verticalborder"></div>
+
+    <div id="WF">
+        <div class="whiteframe">
+            <div id="frametitle"><p>注册</p></div>
+            <input type="email" id="usId" style="width:360px" placeholder="姓氏">
+            <br><br>
+            <input type="email" id="usId" style="width:360px" placeholder="名字">
+            <br><br>
+            <input type="email" id="usId" style="width:360px" placeholder="身份证号码">
+            <br><br>
+            <input type="password" id="pw" style="width:360px" placeholder="请设置密码">
+            <br><br>
+            <input type="password" id="pw" style="width:360px" placeholder="请确认密码">
+            <br><br>
+            <!--input type="email" id="usId" style="width:360px" placeholder="姓氏"></td>
+    <td colspan="2"><input type="text" id="formName" placeholder="名字"></td>
+    </tr>
+    <tr>
+        <td colspan="3" id="emptyName">請填寫姓氏及名字</td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="text" id="formUs" placeholder="用戶名稱"></td>
+        <td><div id="flagUs"></div></td>
+    </tr>
+    <tr>
+        <td colspan="3" id="emptyUs">請填寫有效的用戶名稱</td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="email" id="formEmail" placeholder="電郵"></td>
+        <td><div id="flagEmail"></div></td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="emptyEmail">請填寫有效的電郵</div></td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="text" id="formPhone" placeholder="聯絡電話"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="emptyPhone">請填寫有效的聯絡電話</div></td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="text" id="formId" placeholder="身分證號碼"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="emptyId">請填寫有效的身分證</td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="password" id="formPw" placeholder="密碼"></td>
+        <td><div id="pwStrength"></div></td>
+    </tr>
+    <tr>
+        <td colspan="3" id="numSymbolCheck">密碼需為8-50字元之間，當中包含數字及符號</td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="emptyPw">請填寫有效的密碼</div></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="password" id="formPwCon" placeholder="密碼確認"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="emptyPwCon">確認密碼與原先密碼不相符</div></td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="checkbox" onClick="showPw()">顯示密碼</td>
+    </tr>
+    <br>
+    <br>
+    <br>
+    <tr>
+        <td colspan="2"><a href="login.html" id="plink">改為登入帳號</a></td-->
+                <button id="table1_title1" onClick="regis()">注册</button>
+            <tr>
+                </table>
+        </div>
+        <br><br><br><br><br>
+    <div id="bottombar" style="height:0px"></div>
+    </div>
+    <div id="pending">
+        <div id="verticalborder" style="height:0px"></div>
+        <div id="WF">
+            <div class="whiteframe">
+                <div style="height:200px"></div>
+                <div id="headhead" style="color:black">
+                    等待通过CA进行身份认证，大约需时1至2个工作天。準備跳至主頁。
+                </div>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+        <div id="pendBottom" style="height:0px"></div>
+    </div>
+    <script>
+        function alignVB() {
+        var source = document.getElementById("WF");
+        var target = document.getElementById("verticalborder");
+        var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/3;
+        target.style.height = calHeight + "px";
+        }
+        alignVB();
+
+        function hideEmpty() {
+        var idE = document.getElementById("usId_empty");
+        var pwE = document.getElementById("pw_empty");
+        idE.style.display = "none";
+        pwE.style.display = "none";
+        }
+        hideEmpty();
+        
+        function initializeEmpty() {
+        document.getElementById("emptyName").style.display = "none";
+        document.getElementById("emptyUs").style.display = "none";
+        document.getElementById("emptyEmail").style.display = "none";
+        document.getElementById("emptyPhone").style.display = "none";
+        document.getElementById("emptyId").style.display = "none";
+        document.getElementById("numSymbolCheck").style.display = "block";
+        document.getElementById("emptyPw").style.display = "none";
+        document.getElementById("emptyPwCon").style.display = "none";
+        document.getElementById("pending").style.display = "none";
+
+        }
+        initializeEmpty();
+
+        function topbarsetup() {
+        var source = document.getElementById("WF");
+        var target1 = document.getElementById("topbar");
+        var target2 = document.getElementById("bottombar");
+        var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/3;
+        target1.style.height = calHeight + "px";
+        target2.style.height = calHeight + "px";
+        }
+        topbarsetup();
+
+        function checkPw(str) {
+        var status = true;
+
+        return status;
+        }
+
+        function regis() {
+        var status = true;
+        var sur = document.getElementById("formSur").value;
+        var name = document.getElementById("formName").value;
+        var us = document.getElementById("formUs").value;
+        var email = document.getElementById("formEmail").value;
+        var phone = document.getElementById("formPhone").value;
+        var id = document.getElementById("formId").value;
+        var pw = document.getElementById("formPw").value;
+        var pwCon = document.getElementById("formPwCon").value;
+        initializeEmpty();
+        if ((!sur)||(!name)) {
+        document.getElementById("emptyName").style.display = "block";
+        status = false;
+        }
+        if (!us) {
+        document.getElementById("emptyUs").style.display = "block";
+        status = false;
+        }
+        if (!email) {
+        document.getElementById("emptyEmail").style.display = "block";
+        status = false;
+        }
+        if (!phone) {
+        document.getElementById("emptyPhone").style.display = "block";
+        status = false;
+        }
+        if (!id) {
+        document.getElementById("emptyId").style.display = "block";
+        status = false;
+        }
+        if (!pw) {
+        document.getElementById("emptyPw").style.display = "block";
+        status = false;
+        }
+        else {
+        if (checkPw(pw)==true) {
+        document.getElementById("numSymbolCheck").style.display = "none";
+        }
+        }
+        if (pw!=pwCon) {
+        document.getElementById("emptyPwCon").style.display = "block";
+        status = false;
+        }
+        if (status) {
+        showPending();
+        }
+        return status;
+        }
+
+        function showPending() {
+        document.getElementById("banner").style.display = "none";
+        document.getElementById("WF").style.display = "none";
+        document.getElementById("pending").style.display = "block";
+
+        var source = document.getElementById("WF");
+        var target = document.getElementById("verticalborder");
+        var calHeight = (parseInt(window.innerHeight)-parseInt(source.offsetHeight))/10;
+        target.style.height = calHeight + "px";
+        document.getElementById("pendBottom").style.height = calHeight + "px";
+
+        var t = setTimeout(closePending, 3000);
+        }
+
+        function closePending() {
+        window.location = "index.html"
+        }
+
+        function showPw() {
+        var x = document.getElementById("formPw");
+        var y = document.getElementById("formPwCon");
+        if (x.type==="password") {
+        x.type = "text";
+        y.type = "text";
+        }
+        else {
+        x.type = "password";
+        y.type = "password";
+        }
+        }
+    </script>
+</body>
+</html>
